@@ -1,7 +1,7 @@
 #include <stdio.h> //Biblioteca para entrada e saída de dados.
 #include <string.h> //Biblioteca necessária para usar o strcspn().
 
-//Desafio: Nível Novato
+//Desafio: Nível Aventureiro
 //Super Trunfo - Países
 
 
@@ -13,12 +13,12 @@ void limpar_entrada() {
 
 int main()
 {
-    
+   
     //Declaração das variáveis:
     char estado1, estado2;
     char codigo_carta1[10], codigo_carta2[10], nomeCidade1[50], nomeCidade2[50];
     int populacao1, populacao2, qntdPontosTuristicos1, qntdPontosTuristicos2;
-    float area1, area2, pib1, pib2;
+    float area1, area2, pib1, pib2, densidadePopulacional1, densidadePopulacional2, pibPerCapita1, pibPerCapita2;
 
     printf("Bem-vindo(a), por favor insira os dados das suas cartas aqui:\n");
 
@@ -83,6 +83,20 @@ int main()
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &qntdPontosTuristicos2);
 
+    //Cálculos das variáveis
+
+    //Carta 1:
+
+    densidadePopulacional1 = populacao1 / area1; //Cálculo densidade populacional
+    pib1 = pib1 * 1000000000; // Convertendo o valor digitado (em bilhões) para reais, multiplicando por 1 bilhão
+    pibPerCapita1 = pib1 / populacao1; //Cálculo PIB per capita
+
+    //Carta 2:
+    
+    densidadePopulacional2 = populacao2 / area2;
+    pib2 = pib2 * 1000000000;
+    pibPerCapita2 = pib2 / populacao2;
+
     //Painel da saída de dados:
 
     //Informações da carta 1:
@@ -94,8 +108,11 @@ int main()
     printf("Nome da cidade: %s\n", nomeCidade1);
     printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
-    printf("PIB: %.2f bilhões de reais\n", pib1);
+    printf("PIB: %.2f bilhões de reais\n", pib1 / 1000000000); //divisão do valor do pib por 1 bilhão para exibir em "bilhões de reais"
+
     printf("Número de Pontos Turísticos: %d\n", qntdPontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     //Informações da carta 2:
     printf("\nCarta 2:\n");
@@ -105,8 +122,10 @@ int main()
     printf("Nome da cidade: %s\n", nomeCidade2);
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
-    printf("PIB: %.2f bilhões de reais\n", pib2);
+    printf("PIB: %.2f bilhões de reais\n", pib2 / 1000000000);
     printf("Número de Pontos Turísticos: %d\n", qntdPontosTuristicos2);
-    
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+
     return 0;
 }
