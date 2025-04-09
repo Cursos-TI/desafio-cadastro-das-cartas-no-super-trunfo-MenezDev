@@ -1,7 +1,7 @@
 #include <stdio.h> //Biblioteca para entrada e saída de dados.
 #include <string.h> //Biblioteca necessária para usar o strcspn().
 
-//Desafio: Nível novato
+//Desafio: Nível Novato
 //Super Trunfo - Países
 
 
@@ -25,9 +25,9 @@ int main()
     //Interface para entrada de dados da carta 1:
     printf("\nCarta 1:\n");
 
-    printf("Estado(uma letra de 'A' a 'H'): ");
+    printf("Estado (uma letra de 'A' a 'H'): ");
     scanf("%c", &estado1);
-    printf("Código da Carta(letra do Estado + um número de 01 a 04): ");
+    printf("Código da Carta (letra do Estado + um número de 01 a 04): ");
     scanf("%s", codigo_carta1);
 
     limpar_entrada();
@@ -39,12 +39,12 @@ int main()
     printf("População: ");
     scanf("%d", &populacao1);
 
-    printf("Área: ");
+    printf("Área (em km², use ponto como separador decimal - ex: 1521.11): ");
     scanf("%f", &area1);
 
     limpar_entrada();
 
-    printf("PIB: ");
+    printf("PIB (informe o PIB da cidade (em bilhões de reais, ex: 699.28): ");
     scanf("%f", &pib1);
 
     limpar_entrada();
@@ -57,10 +57,10 @@ int main()
 
     limpar_entrada();
 
-    printf("Estado(uma letra de 'A' a 'H'): ");
+    printf("Estado (uma letra de 'A' a 'H'): ");
     scanf("%c", &estado2);
 
-    printf("Código da Carta(letra do Estado + um número de 01 a 04): ");
+    printf("Código da Carta (letra do Estado + um número de 01 a 04): ");
     scanf("%s", codigo_carta2);
 
     limpar_entrada();
@@ -72,11 +72,11 @@ int main()
     printf("População: ");
     scanf("%d", &populacao2);
 
-    printf("Área: ");
+    printf("Área (em km², use ponto como separador decimal - ex: 1521.11): ");
     scanf("%f", &area2);
 
     limpar_entrada();
-    printf("PIB: ");
+    printf("PIB (informe o PIB da cidade (em bilhões de reais, ex: 699.28): ");
     scanf("%f", &pib2);
 
     limpar_entrada();
@@ -107,6 +107,6 @@ int main()
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", qntdPontosTuristicos2);
-
+    
     return 0;
 }
